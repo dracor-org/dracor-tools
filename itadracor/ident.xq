@@ -38,10 +38,7 @@ return <plays>
     {
       for $item in $tei//tei:castList/tei:castItem
       let $role := $item/tei:role/normalize-space()
-      return
-      <item role="{$role}" n="{count($role)}" x="{local:normalize($role[1])}">
-      {normalize-space($item)}
-      </item>
+      return <item role="{$role}">{normalize-space($item)}</item>
     }
     </cast>
     <speakers>
@@ -67,12 +64,3 @@ return <plays>
   </play>
 }
 </plays>
-
-
-  (: <texts>
-    {
-      for $spk in distinct-values($speaker-texts)
-      order by $spk
-      return <speaker>{$spk}</speaker>
-    }
-  </texts> :)

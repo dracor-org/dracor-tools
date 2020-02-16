@@ -49,7 +49,7 @@
                 </xsl:choose>
               </xsl:variable>
               <xsl:choose>
-                <xsl:when test="@g">
+                <xsl:when test="@group">
                   <personGrp xml:id="{$id}">
                     <name>
                       <xsl:value-of select="@label/string()"/>
