@@ -815,7 +815,7 @@
       <s n="0" label="Potestati" group="yes">potestati</s>
       <s n="0" label="Virtù" id="virtu">virtù</s>
       <s n="0" label="Dominazioni" group="yes">dominazioni</s>
-      <s n="0" label="Troni" g="">troni</s>
+      <s n="0" label="Troni" group="yes">troni</s>
       <s n="0" label="Cherubini" group="yes">cherubini</s>
       <s n="0" label="Serafini" group="yes">serafini</s>
       <s n="1" label="Lucifero">lucifero</s>
