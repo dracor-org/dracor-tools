@@ -3,8 +3,66 @@
   xmlns="http://www.tei-c.org/ns/1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:tei="http://www.tei-c.org/ns/1.0"
-  exclude-result-prefixes="tei">
+  xmlns:functx="http://www.functx.com"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  exclude-result-prefixes="tei xs functx">
 
+  <xsl:function name="functx:substring-after-if-contains" as="xs:string?">
+    <xsl:param name="arg" as="xs:string?"/>
+    <xsl:param name="delim" as="xs:string"/>
+    <xsl:sequence select="
+     if (contains($arg,$delim))
+     then substring-after($arg,$delim)
+     else $arg
+   "/>
+  </xsl:function>
+
+  <xsl:function name="functx:name-test" as="xs:boolean">
+    <xsl:param name="testname" as="xs:string?"/>
+    <xsl:param name="names" as="xs:string*"/>
+    <xsl:sequence select="
+  $testname = $names
+  or
+  $names = '*'
+  or
+  functx:substring-after-if-contains($testname,':') =
+     (for $name in $names
+     return substring-after($name,'*:'))
+  or
+  substring-before($testname,':') =
+     (for $name in $names[contains(.,':*')]
+     return substring-before($name,':*'))
+   "/>
+  </xsl:function>
+
+  <xsl:function name="functx:remove-elements-deep" as="node()*">
+    <xsl:param name="nodes" as="node()*"/>
+    <xsl:param name="names" as="xs:string*"/>
+
+     <xsl:for-each select="$nodes">
+       <xsl:choose>
+         <xsl:when test=". instance of element()">
+           <xsl:if test="not(functx:name-test(name(),$names))">
+             <xsl:element name="{node-name(.)}">
+               <xsl:sequence select="@*,
+                    functx:remove-elements-deep(node(), $names)"/>
+             </xsl:element>
+           </xsl:if>
+         </xsl:when>
+         <xsl:when test=". instance of document-node()">
+           <xsl:document>
+               <xsl:sequence select="
+                    functx:remove-elements-deep(node(), $names)"/>
+           </xsl:document>
+         </xsl:when>
+         <xsl:otherwise>
+           <xsl:sequence select="."/>
+         </xsl:otherwise>
+       </xsl:choose>
+     </xsl:for-each>
+
+  </xsl:function>
+  
   <!-- We use indent=no to prevent Saxon to add unnecessary newlines. -->
   <xsl:output
     method="xml"
@@ -78,7 +136,10 @@
       <xsl:attribute name="who">
         <xsl:call-template name="who">
           <xsl:with-param name="speaker-text">
-            <xsl:value-of select="tei:speaker/normalize-space()"/>
+            <xsl:message>
+              <xsl:value-of select="functx:remove-elements-deep(tei:speaker, '*:note')"/>
+            </xsl:message>
+            <xsl:value-of select="normalize-space(functx:remove-elements-deep(tei:speaker, '*:note'))"/>
           </xsl:with-param>
         </xsl:call-template>
       </xsl:attribute>
