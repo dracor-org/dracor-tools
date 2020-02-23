@@ -240,10 +240,9 @@
       <s n="1" label="Pereo">pereo</s>
       <s n="1" label="Mirra">mirra</s>
       <s n="1" label="Coro" group="yes">coro</s>
-      <!-- FIXME -->
-      <s n="0" group="yes">fanc</s>
-      <s n="0" group="yes">donz</s>
-      <s n="0" group="yes">vecchi</s>
+      <s n="0" ref="#coro" group="yes">fanc</s>
+      <s n="0" ref="#coro" group="yes">donz</s>
+      <s n="0" ref="#coro" group="yes">vecchi</s>
     </speakers>
   </play>
   <play id="ita000012" title="Oreste Vittorio Alfieri">
@@ -433,7 +432,7 @@
       <s n="1" label="Caino">caino</s>
       <s n="1" label="Paggio">paggio</s>
       <s n="1" label="Bargello">bargello</s>
-      <s n="0" lagel="Corte" group="yes">corte</s>
+      <s n="0" label="Corte" group="yes">corte</s>
       <s n="1" label="Facceto">facceto</s>
       <s n="1" label="Solfanello">solfanello</s>
       <s n="1" label="Belisario">belisario</s>
@@ -494,7 +493,7 @@
       <s n="1" label="Gasparina">gasparina</s>
       <s n="1" label="Don Ettore">don ettore</s>
       <s n="1" label="Don Pelagio">don pelagio</s>
-      <s n="0" ref="#appolonia #gasparina #don_ettore #don_pelagio">tutti</s>
+      <s n="0" ref="#apollonia #gasparina #don_ettore #don_pelagio">tutti</s>
     </speakers>
   </play>
   <play id="ita000024" title="La festa di Susanna">
@@ -712,7 +711,7 @@
       <s n="1" label="La Vergine Maria">vergine maria</s>
       <s n="1" label="San Bernardo">san bernardo</s>
       <s n="1" label="Placito">placito</s>
-      <s n="0" ref="#contradino #altro_contadino">contadini</s>
+      <s n="0" ref="#contadino #altro_contadino">contadini</s>
       <s n="0" label="Contadino">contadino</s>
       <s n="0" label="Altro Contadino">altro contadino</s>
       <s n="0" label="Un Servo">servo</s>
@@ -1158,7 +1157,7 @@
       <s n="1" label="Birro">birro</s>
       <s n="1" label="Spacca">spacca</s>
       <s n="1" label="Capitano Bellorofonte Martellione">capitano</s>
-      <s n="0">corte</s>
+      <s n="0" label="Corte" group="yes">corte</s>
       <s n="1" label="Laudomia">laudomia</s>
     </speakers>
   </play>
@@ -1302,7 +1301,7 @@
       <item role="Il Sig. Cav. Pietro Cascina.">Il Sig. Cav. Pietro Cascina. Del quale sono l'inventioni, e le compositioni.</item>
     </cast>
     <speakers>
-      <s n="0" label="Alfea" id="Alfea">alfea sola</s>
+      <s n="0" label="Alfea" id="alfea">alfea sola</s>
       <s n="0" label="Coro delle ninfe dell'arno" id="coro" group="yes">coro delle ninfe dell'arno</s>
       <s n="0" ref="#alfea">alfea</s>
       <s n="0" label="Due delle ninfe" id="due_ninfe" group="yes">due delle ninfe del coro</s>
@@ -1419,6 +1418,9 @@
       <s n="1" label="Dorabella">dorabella</s>
       <!-- FIXME -->
       <s n="3">coro</s>
+      <s label="Coro di soldati e popolani" id="coro_di_soldati_e_popolani" group="yes">coro</s>
+      <s label="Coro di servi" id="coro_di_servi" group="yes">coro</s>
+      <s label="Coro di marinai" id="coro_di_marinai" group="yes">coro</s>
       <s n="1" label="Despina">despina</s>
     </speakers>
   </play>
@@ -1482,6 +1484,8 @@
       <s n="1" label="Basilio">basilio</s>
       <!-- FIXME -->
       <s n="3" label="Coro" group="yes">coro</s>
+      <s label="Coro di paesani" id="coro_di_paesani" group="yes"></s>
+      <s label="Coro di contadinelle" id="coro_di_contadinelle" group="yes"></s>
       <s n="0">tutti</s>
       <s n="1" label="La Contessa D'Almaviva">contessa</s>
       <s n="1" label="Antonio">antonio</s>
@@ -1549,9 +1553,9 @@
       <s n="0" label="La Torre">la torre</s>
       <s n="0" label="Marito De La Prima Sorella" id="primo_marito">marito de la prima sorella</s>
       <s n="0" label="Marito De La Secunda Sorella" id="secundo_marito">marito de la secunda sorella</s>
-      <s n="0" ref="primo_marito">el marito de la prima sorella</s>
-      <s n="0" ref="primo_marito">el primo marito</s>
-      <s n="0" ref="secundo_marito">el secundo marito</s>
+      <s n="0" ref="#primo_marito">el marito de la prima sorella</s>
+      <s n="0" ref="#primo_marito">el primo marito</s>
+      <s n="0" ref="#secundo_marito">el secundo marito</s>
       <s n="0" label="Giove">giove</s>
       <s n="0" label="Vulcano">vulcano</s>
       <s n="0" label="Minerva">minerva</s>
@@ -1559,8 +1563,8 @@
       <s n="0" label="Marte">marte</s>
       <s n="0" label="Febo">febo</s>
       <s n="0" label="El Primo Genero">el primo genero</s>
-      <s n="0" ref="primo_marito">primo marito</s>
-      <s n="0" ref="secundo_marito">l'altro marito</s>
+      <s n="0" ref="#primo_marito">primo marito</s>
+      <s n="0" ref="#secundo_marito">l'altro marito</s>
       <s n="0" label="La Magior Sorella">la magior sorella</s>
       <s n="0" label="La Matre">la matre</s>
       <s n="0" label="Le Tre Grazie">le tre grazie</s>
@@ -1593,7 +1597,7 @@
       <s n="1" label="Soldato">soldato</s>
       <s n="2" label="Coro" group="yes">coro</s>
       <s n="1" label="Ofioneo">ofioneo</s>
-      <s n="0">saffici</s>
+      <s n="0" label="Saffici">saffici</s>
       <s n="1" label="Licisco">licisco</s>
       <s n="1" label="Erasitea">erasitea</s>
     </speakers>
@@ -1670,7 +1674,7 @@
       <s n="0" label="Un altro">un altro</s>
       <s n="0" label="Un terzo">un terzo</s>
       <s n="0" label="Un quatro">un quarto</s>
-      <s n="1" ref="uno_2">primo</s>
+      <s n="1" ref="#uno_2">primo</s>
       <s n="0" ref="#imperadore">giuliano nuovo imperadore</s>
       <s n="0" ref="#imperadore">giuliano imperadore</s>
       <s n="0" ref="#imperadore">giuliano</s>
@@ -1741,7 +1745,7 @@
       <s n="1" label="Beniamino" id="beniamino">ben</s>
       <s label="Alessandro" id="alessandro"/>
       <s label="Alessandra" id="alessandra"/>
-      <s n="1" label="Coro">cor</s>
+      <s n="1" label="Coro" id="coro" group="yes">cor</s>
       <s n="1" label="Consigliere" id="consigliere">cons</s>
       <s n="1" label="Nunzio" id="nunzio">nun</s>
       <s n="1" label="Aristobolo" id="aristobolo">aris</s>
@@ -1764,8 +1768,7 @@
       <s n="1" label="Il Vecchio">vecchio</s>
       <s n="1" label="Il Geloso">geloso</s>
       <s n="1" label="Il Terzo">terzo</s>
-      <!-- FIXME -->
-      <s n="0" group="yes">coro</s>
+      <s n="0" label="Coro" group="yes">coro</s>
       <s n="1" label="Il Sacerdote">sacerdote</s>
     </speakers>
   </play>
@@ -1789,7 +1792,7 @@
       <s n="1" label="Diana">diana</s>
       <s n="1" label="Mirzia">mirzia</s>
       <s n="1" label="Trebazio">trebazio</s>
-      <s n="0">satiro</s>
+      <s n="0" label="Satiro">satiro</s>
     </speakers>
   </play>
   <play id="ita000065" title="La Lucilla costante Silvio Fiorillo">
@@ -1940,7 +1943,7 @@
       <s n="2" label="Servo di Marco Antonio">servo</s>
       <s n="1" label="Cameriera di Cleopatra">cameriera</s>
       <s n="1" label="Eunuco di Cleopatra">eunuco</s>
-      <s n="1" label="Coro">coro</s>
+      <s n="1" label="Coro" group="yes">coro</s>
       <s n="0" label="Segretario di Cleopatra">secretario</s>
       <s n="1" label="Ottavio">ottavio</s>
       <s n="1" label="Agrippa">agrippa</s>
@@ -1962,7 +1965,7 @@
       <s n="0" label="Fauno">fauno</s>
       <s n="0" label="Sileno">sileno</s>
       <s n="0" label="Egle">egle</s>
-      <s n="0" label="Choro">choro</s>
+      <s n="0" label="Choro" group="yes">choro</s>
       <s n="0" label="Oreadi">oreadi</s>
       <s n="0" label="Driadi">driadi</s>
       <s n="0" label="Napee">napee</s>
@@ -2087,12 +2090,12 @@
       <s n="1" label="Capitano della Pregione" id="capitano">cap</s>
       <s n="0" label="Fratello del Podestà" id="fratello">frat del pod</s>
       <s n="1" ref="#capitano">capit</s>
-      <s n="0" ref="fratello">frat del p</s>
+      <s n="0" ref="#fratello">frat del p</s>
       <s n="0" label="Lino" id="lino">lino</s>
       <s n="0" ref="#nastagio">nst</s>
       <s n="1" label="Cavaliere del Podestà" id="cavaliere">cav</s>
       <s n="1" ref="#macaria">mad</s>
-      <s n="0" ref="fratello">fra del pod</s>
+      <s n="0" ref="#fratello">fra del pod</s>
       <s n="0" label="Famiglio" id="famiglio">fam</s>
       <s n="1" ref="#lamprino">lam</s>
     </speakers>
@@ -2968,7 +2971,7 @@
       <s n="1" label="Barsene">barsene</s>
       <s n="1" label="Mitrane">mitrane</s>
       <s n="1" label="Fenicio">fenicio</s>
-      <s n="0" label="Coro">coro</s>
+      <s n="0" label="Coro" group="yes">coro</s>
       <s n="0" ref="#coro">primo coro</s>
       <s n="0" ref="#coro">secondo coro</s>
       <s n="1" label="Alceste">alceste</s>
@@ -3031,7 +3034,7 @@
       <s n="1" label="Ezio">ezio</s>
       <s n="1" label="Fulvia" id="fulvia">ful</s>
       <s n="1" label="Onoria" id="Onoria">onor</s>
-      <s n="0" label="Coro">coro</s>
+      <s n="0" label="Coro" group="yes">coro</s>
     </speakers>
   </play>
   <play id="ita000110" title="Il re pastore Pietro Metastasio">
@@ -3053,7 +3056,7 @@
       <s n="0" ref="#elisa #tamiri #aminta #agenore">a quattro</s>
       <s n="0" ref="#tamiri #agenore">tam agen</s>
       <s n="0" ref="#aminta #elisa">amin eli</s>
-      <s n="0" label="Coro">coro</s>
+      <s n="0" label="Coro" group="yes">coro</s>
     </speakers>
   </play>
   <play id="ita000111" title="Ipermestra Pietro Metastasio">
@@ -3094,7 +3097,7 @@
       <s n="1" label="Toante" id="toante">toan</s>
       <s n="1" label="Learco" id="learco">lear</s>
       <s n="1" label="Giasone" id="giasone">gias</s>
-      <s n="0" label="Coro">coro</s>
+      <s n="0" label="Coro" group="yes">coro</s>
     </speakers>
   </play>
   <play id="ita000113" title="L'eroe cinese Pietro Metastasio">
@@ -3112,7 +3115,7 @@
       <s n="1" label="Mintéo" id="minteo">min</s>
       <s n="1" label="Leango" id="leango">lean</s>
       <s n="0" ref="#lisinga #siveno">a due</s>
-      <s n="0" label="Coro">coro</s>
+      <s n="0" label="Coro" group="yes">coro</s>
     </speakers>
   </play>
   <play id="ita000114" title="L'impresario delle Canarie, Intermezzi per la Didone Pietro Metastasio">
@@ -3136,7 +3139,7 @@
       <s n="1" label="Licida">licida</s>
       <s n="1" label="Aminta">aminta</s>
       <s n="1" label="Megacle">megacle</s>
-      <s n="0" label="Coro">coro</s>
+      <s n="0" label="Coro" group="yes">coro</s>
       <s n="1" label="Argene">argene</s>
       <s n="1" label="Aristea">aristea</s>
       <s n="1" label="Clistene">clistene</s>
@@ -3343,6 +3346,7 @@
       <s n="0" label="Gli Invitati alla festa" group="yes">invitati</s>
       <s n="1" label="Allegrezza">allegrezza</s>
       <s n="0" label="Un servo">servo</s>
+      <s n="0" ref="#angelo #padre #figliuolo_minore #figliuolo_maggiore #libero_albitro #peccati #superbia #invitati #allegrezza #servo">tutti i personaggi</s>
     </speakers>
   </play>
   <play id="ita000124" title="Gli esuli tebani Francesco Mario Pagano">
@@ -3402,7 +3406,7 @@
     <speakers>
       <s n="1" label="Rosmunda" id="rosmunda">ros</s>
       <s n="1" label="Nutrice" id="nutrice">nut</s>
-      <s n="1" label="Coro">coro</s>
+      <s n="1" label="Coro" group="yes">coro</s>
       <s n="1" ref="#coro">co</s>
       <s n="1" label="Falisco" id="falisco">fal</s>
       <s n="1" label="Nunzio" id="nunzio">nunz</s>
@@ -3426,7 +3430,8 @@
       <item role="GUARDIE">GUARDIE</item>
     </cast>
     <speakers>
-      <s n="0">emonte</s>
+      <!-- FIXME: check if this is a typo for Archidamo -->
+      <s n="0" label="Emonte">emonte</s>
       <s n="1" label="Eudamida">eudamida</s>
       <s n="1" label="Archidamo">archidamo</s>
       <s n="1" label="Teane">teane</s>
@@ -3461,7 +3466,8 @@
       <s n="1" label="Licinio">licinio</s>
       <s n="1" label="Porzia">porzia</s>
       <s n="1" label="Trapola">trapola</s>
-      <s n="0">nupola</s>
+      <!-- FIXME: double check if this is really a typo -->
+      <s n="0" ref="#trapola">nupola</s>
     </speakers>
   </play>
   <play id="ita000129" title="Canace Sperone Speroni">
@@ -3488,7 +3494,7 @@
       <s n="1" label="Famiglio">famiglio</s>
       <s n="1" label="Nutrice">nutrice</s>
       <s n="1" label="Canace">canace</s>
-      <s n="1" label="Coro">coro</s>
+      <s n="1" label="Coro" group="yes">coro</s>
       <s n="1" label="Ministro">ministro</s>
     </speakers>
   </play>
